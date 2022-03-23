@@ -1,5 +1,3 @@
-# Copyright (C) 2021 By Veez Music-Project
-
 from __future__ import unicode_literals
 
 import asyncio
@@ -38,7 +36,7 @@ ydl_opts = {
 @Client.on_message(command(["بحث", f"song@{bn}"]) & ~filters.edited)
 def song(_, message):
     query = " ".join(message.command[1:])
-    m = message.reply("🔎 finding song...")
+    m = message.reply("🔎 جاري البحث حمبي...")
     ydl_ops = {"format": "bestaudio[ext=m4a]"}
     try:
         results = YoutubeSearch(query, max_results=1).to_dict()
@@ -51,21 +49,21 @@ def song(_, message):
         duration = results[0]["duration"]
 
     except Exception as e:
-        m.edit("❌ لم اجد شيئا.\n\nاعطني اسم المغني كامل.")
+        m.edit("❌ بحثت وملكيت شي.\n\nانطيني اسم اغنية عدل.")
         print(str(e))
         return
-    m.edit("📥 downloading file...")
+    m.edit("📥 جاري التنزيل حمبي...")
     try:
         with yt_dlp.YoutubeDL(ydl_ops) as ydl:
             info_dict = ydl.extract_info(link, download=False)
             audio_file = ydl.prepare_filename(info_dict)
             ydl.process_info(info_dict)
-        rep = f"**🎧 تم التحميل بواسطة @rr8r9**"
+        rep = f"**🎧 تم التحميل بواسطة @IIlIIIIIll**"
         secmul, dur, dur_arr = 1, 0, duration.split(":")
         for i in range(len(dur_arr) - 1, -1, -1):
             dur += int(float(dur_arr[i])) * secmul
             secmul *= 60
-        m.edit("📤 uploading file...")
+        m.edit("📤 جاري التحميل يعيوني...")
         message.reply_audio(
             audio_file,
             caption=rep,
@@ -76,7 +74,7 @@ def song(_, message):
         )
         m.delete()
     except Exception as e:
-        m.edit("❌ error, wait for bot owner to fix")
+        m.edit("❌ خطا,انتظر حتى يصلح مالك البوت")
         print(e)
 
     try:
@@ -114,14 +112,14 @@ async def vsong(client, message):
     except Exception as e:
         print(e)
     try:
-        msg = await message.reply("📥 **downloading video...**")
+        msg = await message.reply("📥 **جاري التحميل يعيوني...**")
         with YoutubeDL(ydl_opts) as ytdl:
             ytdl_data = ytdl.extract_info(link, download=True)
             file_name = ytdl.prepare_filename(ytdl_data)
     except Exception as e:
         return await msg.edit(f"🚫 **error:** {e}")
     preview = wget.download(thumbnail)
-    await msg.edit("📤 **uploading video...**")
+    await msg.edit("📤 **جاري التنزيل ...**")
     await message.reply_video(
         file_name,
         duration=int(ytdl_data["duration"]),
@@ -139,14 +137,14 @@ async def vsong(client, message):
 async def lyrics(_, message):
     try:
         if len(message.command) < 2:
-            await message.reply_text("» **give a lyric name too.**")
+            await message.reply_text("» **إعطاء اسم غنائي أيضا.**")
             return
         query = message.text.split(None, 1)[1]
-        rep = await message.reply_text("🔎 **searching lyrics...**")
+        rep = await message.reply_text("🔎 **جاري البحث...**")
         resp = requests.get(
             f"https://api-tede.herokuapp.com/api/lirik?l={query}"
         ).json()
         result = f"{resp['data']}"
         await rep.edit(result)
     except Exception:
-        await rep.edit("❌ **results of lyric not found.**\n\n» **please give a valid song name.**")
+        await rep.edit("❌  **لم اجد شيئا.**\n\n» **اعطني اسم المغني كامل.**")
