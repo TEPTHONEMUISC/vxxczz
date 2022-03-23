@@ -63,26 +63,26 @@ async def start_(client: Client, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                        "➕ اضفني الى مجموعتك ➕",
+                        "‹ اضفني الى مجموعتك ›",
                         url=f"https://t.me/{BOT_USERNAME}?startgroup=true",
                     )
                 ],
-                [InlineKeyboardButton("طريقة التشغيل", callback_data="cbhowtouse")],
+                [InlineKeyboardButton("‹ طريقة التشغيل ›", callback_data="cbhowtouse")],
                 [
-                    InlineKeyboardButton("الاوامر الاساسية", callback_data="cbcmds"),
-                    InlineKeyboardButton("المطور", url=f"https://t.me/{OWNER_NAME}"),
+                    InlineKeyboardButton("‹ الاوامر الاساسية ›", callback_data="cbcmds"),
+                    InlineKeyboardButton("‹ المطور ›", url=f"https://t.me/{OWNER_NAME}"),
                 ],
                 [
                     InlineKeyboardButton(
-                        "قناة السورس", url=f"https://t.me/{GROUP_SUPPORT}"
+                        "‹ كروب الدعم ›", url=f"https://t.me/{GROUP_SUPPORT}"
                     ),
                     InlineKeyboardButton(
-                        "تحديثات البوت", url=f"https://t.me/{UPDATES_CHANNEL}"
+                        "‹ تحديثات البوت ›", url=f"https://t.me/{UPDATES_CHANNEL}"
                     ),
                 ],
                 [
                     InlineKeyboardButton(
-                        "ملاحظة مهمة جدأ", url="https://t.me/Xl444/22"
+                        "‹ قناة السورس ›", url="https://t.me/UX4SL"
                     )
                 ],
             ]
@@ -102,9 +102,9 @@ async def alive(client: Client, message: Message):
     keyboard = InlineKeyboardMarkup(
         [
             [
-                InlineKeyboardButton("اوامر التشغيل", url=f"https://t.me/Xl444/31"),
+                InlineKeyboardButton("‹ قناة السورس ›", url=f"https://t.me/UX4SL"),
                 InlineKeyboardButton(
-                    "مطور السورس", url=f"https://t.me/IIlIIIIIll"
+                    "‹ تحديثات البوت ›", url=f"https://t.me/KlllllIS"
                 ),
             ]
         ]
