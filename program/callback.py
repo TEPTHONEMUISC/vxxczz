@@ -45,7 +45,7 @@ async def cbstart(_, query: CallbackQuery):
                 ],
                 [
                     InlineKeyboardButton(
-                        "‹ قناة السورس ›", url="https://t.me/UX4SL"
+                        "‹ قناة السورس ›", url="https://t.me/MUISC_TEBTHON"
                     )
                 ],
             ]
@@ -68,7 +68,7 @@ async def cbguides(_, query: CallbackQuery):
 
 ℹ️ ** اذ لم ينضم حساب المساعد اكتب .اطلع , وبعد ذالك اكتب .انضم**
 
-ℹ️ ** اي مشكلة تواجها لاتتردد في التحدث مع المطور: @KIlIIQ**
+ℹ️ ** اي مشكلة تواجها لاتتردد في التحدث مع المطور: @P17_12**
 
 ℹ️ __بواسطة  {BOT_NAME} __""",
         reply_markup=InlineKeyboardMarkup(
