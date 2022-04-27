@@ -1,7 +1,7 @@
 {
-    "name": "Video x Music Stream Bot",
-    "description": "Telegram bot for Streaming Video & Music trought the Telegram Group Video Chat, powered by pytgcalls and pyrogram",
-    "logo": "https://telegra.ph/file/1c41ded2dd871eb36bd7e.png",
+    "name": "سورس تيبثون ميوزك",
+    "description": "اهلا عزيزي يمكنك تنصيب بوت اغاني بكل حقوقك ~قناتنا@MUISC_TEBTHON
+    "logo": "https://telegra.ph/file/48cc19f09c0e8c8fdc9d3.jpg",
     "keywords": [
         "pytgcalls",
         "telegram bot",
@@ -47,22 +47,22 @@
         "GROUP_SUPPORT": {
             "description": "if you have group, then fill the group username here without @",
             "required": true,
-            "value": "VeezSupportGroup"
+            "value": "jhvgfffc"
         },
         "UPDATES_CHANNEL": {
             "description": "if you have channel, then fill the channel username here without @",
             "required": true,
-            "value": "levinachannel"
+            "value": "MUISC_TEBTHON"
         },
         "OWNER_NAME": {
             "description": "fill with your telegram account username without @",
             "required": true,
-            "value": "dlwrml"
+            "value": "P17_12"
         },
         "ALIVE_NAME": {
             "description": "fill with your telegram account nickname/name",
             "required": true,
-            "value": "Levina"
+            "value": "Tepthon"
         }
     },
     "addons": [],
