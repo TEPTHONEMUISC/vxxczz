@@ -1,10 +1,10 @@
 {
 
-    "name": "Video x Music Stream Bot",
+    "name": "Tepthon muisc",
 
     "description": "Telegram bot for Streaming Video & Music trought the Telegram Group Video Chat, powered by pytgcalls and pyrogram",
 
-    "logo": "https://telegra.ph/file/1c41ded2dd871eb36bd7e.png",
+    "logo": "https://telegra.ph/file/48cc19f09c0e8c8fdc9d3.jpg",
 
     "keywords": [
 
@@ -126,7 +126,7 @@
 
             "required": true,
 
-            "value": "Levina"
+            "value": "Tepthone"
 
         }
 
