@@ -1,4 +1,15 @@
-ASSISTANT_NAME: $MUSIC_DB_URI
+version: "3.9"
+services:
+  worker:
+    build: .
+    environment:
+      API_ID: $API_ID
+      API_HASH: $API_HASH
+      BOT_TOKEN: $BOT_TOKEN
+      ALIVE_IMG: $ALIVE_IMG
+      BOT_NAME: $BOT_NAME
+      BOT_USERNAME: $BOT_USERNAME
+      ASSISTANT_NAME: $MUSIC_DB_URI
       UPDATES_CHANNEL: $UPDATES_CHANNEL
       GROUP_SUPPORT: $GROUP_SUPPORT
       OWNER_ID: $OWNER_ID
