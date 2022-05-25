@@ -1,14 +1,21 @@
-ASSISTANT_NAME: $MUSIC_DB_URI
-      UPDATES_CHANNEL: $UPDATES_CHANNEL
-      GROUP_SUPPORT: $GROUP_SUPPORT
-      OWNER_ID: $OWNER_ID
-      START_IMG_URL: $START_IMG_URL
+version: "3.9"
+services:
+  worker:
+    build: .
+    environment:
+      HNDLR: 
       SESSION_NAME: $SESSION_NAME
-      STRING_SESSION2: $STRING_SESSION2
-      STRING_SESSION3: $STRING_SESSION3
-      STRING_SESSION4: $STRING_SESSION4
-      STRING_SESSION5: $STRING_SESSION5
-      OWNER_NAME: $OWNER_NAME
-      SUDO_USERS: $SUDO_USERS
-      ALIVE_NAME: $ALIVE_NAME
-      UPSTREAM_BRANCH: $UPSTREAM_BRANCH
+      API_ID: $API_ID  # defaults to None
+      API_HASH: $API_HASH  # defaults to None
+      SUDO_USERS: $SUDO_USERS  # defaults to None
+      UPDATES_CHANNEL: $UPDATES_CHANNEL  # defaults to None
+      BOT_TOKEN: $BOT_TOKEN  # defaults to None
+      BOT_USERNAME: $BOT_USERNAME  # defaults to None
+      ASSISTANT_NAME: $ASSISTANT_NAME  # defaults to None
+      GROUP_SUPPORT: $GROUP_SUPPORT  # defaults to None
+      BOT_NAME: $BOT_NAME  # defaults to None
+      OWNER_NAME: $OWNER_NAME  # defaults to None
+      ALIVE_NAME: $ALIVE_NAME  # defaults to None
+      DURATION_LIMIT: $DURATION_LIMIT  # defaults to None
+
+      
